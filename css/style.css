@@ -1,0 +1,75 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+    box-sizing: inherit;
+}
+
+
+.container {
+    margin: 0 auto;
+    max-width: 900px;
+    color: #000000;
+    background-color: rgb(228, 209, 173);
+    font: 25px/2 'Oswald', sans-serif;
+}
+
+.list {
+    width: 100%;
+}
+
+.list__field {
+    background-color: bisque;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.list__field--biggerGap {
+    margin: 15px 0 0 0;
+}
+
+.list__item {
+    background-color: bisque;
+    margin: 5px 0;
+    padding: 5px;
+    list-style-type: none;
+    min-height: 80px;
+}
+
+.list__item--done {
+    text-decoration: line-through;
+}
+
+.list__item--row {
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    grid-gap: 10px;
+    align-content: center;
+}
+
+.button_done_unchecked {
+    background-color: rgb(255, 232, 127);
+    transition: transform 1s ease-in;
+}
+
+.button_done_unchecked:hover {
+    background-color: rgb(180, 144, 61);
+    transition: 0.3s;
+    transform: rotate(360deg);
+}
+
+.button__done {
+    background-size: contain;
+    width: 50px;
+    content:"✔";
+}
+
+.button__remove {
+    background-image: url("https://i.postimg.cc/Pq3H0494/Kosz.png");
+    background-size: cover ;
+    width: 50px;
+    height: 50px;
+}
