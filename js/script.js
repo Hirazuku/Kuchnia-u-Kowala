@@ -1,11 +1,16 @@
 {
-    const tasks = [
-    ];
+    const localStorageKey = "tasks";
+
+    const saveTasksInLocalStorage = (tasks) => {
+        localStorage.setItem(localStorageKey, JSON.stringify(tasks));
+    };
+
+    let tasks = JSON.parse(localStorage.getItem(localStorageKey)) || [];
 
     const addNewTask = (newTaskContent) => {
-
         tasks.push({
             content: newTaskContent,
+            done: false,
         });
 
         const field = document.querySelector(".js-newTask");
@@ -343,6 +348,7 @@
         let htmlString = "";
 
         for (const task of tasks) {
+            if (!task) continue;
             htmlString += `
             <li class="list__item list__item--row">
               <button 
@@ -353,6 +359,7 @@
             `;
         }
         document.querySelector(".js-tasks").innerHTML = htmlString;
+        saveTasksInLocalStorage(tasks);
 
         bindEvents();
     }
