@@ -334,7 +334,7 @@
 
         doneButtons.forEach((doneButton, index) => {
             doneButton.addEventListener("click", () => {
-                doneTask(index); 
+                doneTask(index);
             });
         });
     }
@@ -344,14 +344,10 @@
 
         for (const task of tasks) {
             htmlString += `
-            <li 
-            class="list__item list__item--row ${task.done ? "list__item--done" : ""}"
-            >
+            <li class="list__item list__item--row">
               <button 
-                class="button_done_unchecked js-done ${task.done ?  "js-button__done" : ""}">✓</button 
-        
-              >
-               ${task.content}
+                class="button_done_unchecked js-done ">✓</button>
+               <a class=" ${task.done ? "list__item--done" : ""}">${task.content}</a>
               <button class="js-remove button__remove"></button>
             </li>
             `;
