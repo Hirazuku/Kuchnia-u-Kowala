@@ -16,7 +16,7 @@
     color: rgb(0, 0, 0);
     background-color: rgb(235, 206, 154);
     padding: 5px;
-    margin: 10px 0;
+    margin: 10px 10px;
     border: 2px solid rgba(109, 77, 8, 0.555);
     border-radius: 5px;
     width: auto;
@@ -43,6 +43,13 @@
     align-items: center;
 }
 
+.link:hover {
+    color: rgb(241, 232, 211);
+    background-color: rgb(165, 116, 42);
+    transition: 0.3s;
+    transform: scale(1.2);
+}
+
 @media (max-width: 500px) {
     .container {
         margin: 10px;
@@ -55,5 +62,12 @@
 
     .button {
         width: 40%;
+        margin: 5px 0;
+    }
+
+    .link {
+        padding: 10px;
+        margin: 5px;
+        font-size: 25px;
     }
 }
