@@ -6,7 +6,7 @@
     };
 
     let tasks = JSON.parse(localStorage.getItem(localStorageKey)) || [];
-    
+
     const addNewTask = (newTaskContent) => {
         tasks.push({
             content: newTaskContent,
@@ -14,16 +14,7 @@
         });
 
         const field = document.querySelector(".js-newTask");
-        const newButton1 = document.querySelector(".js-newButton1");
-        const newButton2 = document.querySelector(".js-newButton2");
         field.value = "";
-        newButton1.value = "";
-        newButton2.value = "";
-        render();
-    }
-
-    const addNewButton = (newButtonContent1, newButtonContent2) => {
-        addNewTask(newButtonContent1)
         render();
     }
 
@@ -384,32 +375,10 @@
         addNewTask(newTaskContent);
     }
 
-    const onFormSubmitButton = (event) => {
-        event.preventDefault();
-
-        const newButtonContent1 = document.querySelector(".js-newButton1").value.trim();
-        const newButtonContent2 = document.querySelector(".js-newButton2").value.trim();
-
-        if (newButtonContent1 === "" && newButtonContent2 !== "") {
-            return addNewTask(newButtonContent2);
-        }
-        if (newButtonContent1 !== "" && newButtonContent2 === "") {
-            return addNewTask(newButtonContent1);
-        }
-        if (newButtonContent1 === "" && newButtonContent2 === "") {
-            return;
-        }
-
-        addNewButton(newButtonContent1);
-        addNewTask(newButtonContent2);
-    }
-
     const init = () => {
         render();
         const form = document.querySelector(".js-form");
         form.addEventListener("submit", onFormSubmit);
-        const formButton = document.querySelector(".js-formButton");
-        formButton.addEventListener("submit", onFormSubmitButton);
         const rosol = document.querySelector(".js-rosol");
         rosol.addEventListener("click", addRosol);
         const ogorkowa = document.querySelector(".js-ogorkowa");
@@ -446,8 +415,6 @@
         krokiety.addEventListener("click", addKrokiety);
         const bigos = document.querySelector(".js-bigos");
         bigos.addEventListener("click", addBigos);
-        const newButton = document.querySelector(".js-newButton");
-        newButton.addEventListener("click", onFormSubmitButton);
     }
 
     init();
