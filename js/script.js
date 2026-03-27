@@ -6,7 +6,7 @@
     };
 
     let tasks = JSON.parse(localStorage.getItem(localStorageKey)) || [];
-
+    
     const addNewTask = (newTaskContent) => {
         tasks.push({
             content: newTaskContent,
