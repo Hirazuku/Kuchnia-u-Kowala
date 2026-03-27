@@ -24,7 +24,7 @@
 
 <body class="container">
     <header class="header">
-        <img src="public/share.png" class="image">
+        <img src="public/share.png" class="image" alt="Mega Żarcie U Kowala">
         <h1 class="header--content">Mega Żarcie "U Kowala"</h1>
     </header>
     <main class="list">
@@ -73,47 +73,56 @@
                 href="https://www.kwestiasmaku.com/przepis/krokiety-z-kapusta-i-grzybami"
                 title="Przepis na krokiety z kapustą">
                 Krokiety z kapustą</a>
+            <div class="js-recipeLinks"></div>
         </div>
-        <div class="list__field">
+        <h2 class="list__field title">Dodaj własny link do przepisu</h2>
+        <form class="js-formRecipeLink list__field">
+            <fieldset>
+                <input class="js-customRecipeName form__field" placeholder="Nazwa przepisu (opcjonalnie)">
+                <input class="js-customRecipeUrl form__field" placeholder="Link do przepisu (np. https://...)">
+                <button class="button" type="submit">Dodaj link</button>
+            </fieldset>
+        </form>
+        <div>
             <h2 class="title">Lista zakupów</h2>
             <h3 class="title">Dania typowe (dodaj gotowy zestaw produktów)</h3>
-            <button class="js-rosol link">Rosół</button>
-            <button class="js-ogorkowa link">Ogórkowa</button>
-            <button class="js-schab link">Schabowy smażony</button>
-            <button class="js-schabDuszony link">Schabowy duszony</button>
-            <button class="js-gulasz link">Gulasz</button>
-            <button class="js-karkowkaPomysl link">Karkówka z pomysłu</button>
-            <button class="js-filet link">Filet</button>
-            <button class="js-curry link">Curry</button>
-            <button class="js-dramstiki link">Dramstiki</button>
-            <button class="js-ryba link">Ryba</button>
-            <button class="js-kalafior link">Placki z kalafiora</button>
-            <button class="js-nalesnikiTwarog link">Naleśniki z twarogiem</button>
-            <button class="js-racuchy link">Racuchy z jabłkami</button>
-            <button class="js-szpinak link">Szpinak</button>
-            <button class="js-tagiatelle link">Tagiatelle z kurczakiem</button>
-            <button class="js-carbonara link">Carbonara</button>
-            <button class="js-krokietKapusta link">Krokiety z kapustą</button>
-            <button class="js-bigos link">Bigos</button>
-            <button class="js-newButton link">New Button</button>
-            <button class="js-newButton1 link">New Button</button>
+            <div class="js-buttons list__field">
+                <button class="js-rosol link">Rosół</button>
+                <button class="js-ogorkowa link">Ogórkowa</button>
+                <button class="js-schab link">Schabowy smażony</button>
+                <button class="js-schabDuszony link">Schabowy duszony</button>
+                <button class="js-gulasz link">Gulasz</button>
+                <button class="js-karkowkaPomysl link">Karkówka z pomysłu</button>
+                <button class="js-filet link">Filet</button>
+                <button class="js-curry link">Curry</button>
+                <button class="js-dramstiki link">Dramstiki</button>
+                <button class="js-ryba link">Ryba</button>
+                <button class="js-kalafior link">Placki z kalafiora</button>
+                <button class="js-nalesnikiTwarog link">Naleśniki z twarogiem</button>
+                <button class="js-racuchy link">Racuchy z jabłkami</button>
+                <button class="js-szpinak link">Szpinak</button>
+                <button class="js-tagiatelle link">Tagiatelle z kurczakiem</button>
+                <button class="js-carbonara link">Carbonara</button>
+                <button class="js-krokietKapusta link">Krokiety z kapustą</button>
+                <button class="js-bigos link">Bigos</button>
+            </div>
         </div>
+        <h2 class="list__field title">Dodaj własne danie typowe</h2>
+        <form class="js-formButton list__field">
+            <fieldset>
+                <input class="js-customDishName form__field" placeholder="Nazwa dania (np. Leczo)">
+                <input class="js-customDishProducts form__field" placeholder="Produkty po przecinku (np. Cukinia, Papryka, Cebula)">
+                <button class="button" type="submit">Dodaj danie typowe</button>
+            </fieldset>
+        </form>
         <h2 class="list__field title">Dodaj nowy produkt</h2>
         <form class="js-form list__field">
             <input class="js-newTask form__field" placeholder="Co jest do kupienia?">
-            <button class="button">Dodaj do listy</button>
+            <button class="button" type="submit">Dodaj do listy</button>
         </form>
         <h3 class="list__field list__field--biggerGap title">Lista produktów </h3>
         <ul class="js-tasks list__item">
         </ul>
-        <h2 class="list__field title">Dodaj przycisk</h2>
-        <form class="js-formButton list__field">
-            <fieldset>
-                <input class="js-newButton1 form__field" placeholder="Co jest do kupienia?">
-                <input class="js-newButton2 form__field" placeholder="Co jest do kupienia?">
-                <button class="button">Dodaj przycisk do listy</button>
-            </fieldset>
-        </form>
     </main>
 </body>
 
